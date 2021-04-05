@@ -2,4 +2,4 @@
 
 - Dependencias
 
-> npm install express , mysql , body-parser
+> npm install express , mysql , body-parser , cors
