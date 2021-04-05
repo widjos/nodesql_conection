@@ -1,0 +1,14 @@
+CREATE DATABASE Redes_P3;
+
+SET sql_mode = "";
+
+USE Redes_P3;
+
+CREATE TABLE INVENTARIO(
+id_inventario INT  PRIMARY KEY AUTO_INCREMENT ,
+nombre VARCHAR(50) NOT NULL, 
+precio INT DEFAULT 0,
+cantidad INT
+);
+
+
