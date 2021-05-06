@@ -14,6 +14,34 @@ Consultas.getAll((err,data) => {
 
 };
 
+
+exports.getVentas = (req, res) => {
+    Consultas.getVentas((err,data) => {
+     
+        if(err)
+        res.status(500).send({
+            message:
+                err.message || "Un error ocurrio mientras se obtenian los datos"
+        });
+        else res.send(data);
+    });
+    
+    };
+
+ 
+    exports.getVendedor = (req, res) => {
+        Consultas.getVendedor((err,data) => {
+         
+            if(err)
+            res.status(500).send({
+                message:
+                    err.message || "Un error ocurrio mientras se obtenian los datos"
+            });
+            else res.send(data);
+        });
+        
+        };    
+
 exports.insertProduct = (req , res) => {
 
     if(!req.body) {

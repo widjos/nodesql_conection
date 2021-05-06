@@ -6,4 +6,8 @@ module.exports = app => {
     app.post("/insertProduct", consultas.insertProduct);
 
 
+    app.get("/getVentas", consultas.getVentas);
+
+    app.get("/getVendedor", consultas.getVendedor);
+
 };
