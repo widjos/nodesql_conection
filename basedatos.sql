@@ -153,10 +153,3 @@ INSERT INTO VENTA(id_vendedor, fecha , id_inventario) VALUES (
 );
 
 
--- GET DE LA TABLA VENTAS 
-
-SELECT v.id_transaccion, ven.id_vendedor , ven.nombre, v.fecha ,i.nombre FROM  
-VENTA AS v INNER JOIN VENDEDOR AS ven ON 
-v.id_vendedor = ven.id_vendedor
-INNER JOIN INVENTARIO AS i 
-ON v.id_inventario = i.id_inventario;
