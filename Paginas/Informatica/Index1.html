@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>  
   <head>    
-    <title>Practica 1 Redes 1 - Informatica</title>    
+    <title>Practica 1 Redes 1 - RRHH</title>    
     <meta charset="UTF-8"> 
     <link href="style.css" rel="stylesheet" type="text/css"/>    
   </head>       
@@ -10,7 +10,7 @@
         <div>
            
         </div>  
-      <h1>Departamento de Informatica</h1>      
+      <h1>Departamento de Recursos Humanos</h1>      
     </header>    
     <section>      
       <article>
@@ -20,6 +20,31 @@
         <p>201612378 - Juan José Hernandez Rodriguez</p>
         <p>201602952 - Widvin Josué Quiñónez Díaz  </p>
       </article>      
+    </section>
+    <section id="inputarea">
+      <h3>Aqui puede agregar nuevos vendedores</h3>
+      <form >
+        <div id="section1">
+          <h3>Dpi:</h3><input id="formDPI" name="dpi"> 
+        </div>
+        <div id="section2">
+          <h3>Nombre:</h3><input id="formNombre" name="nombre"> 
+        </div>
+        <div id="section3">
+          <h3>Apellido:</h3><input id="formApellido" name="apellido"> 
+        </div>
+        <div id="section4">
+          <h3>Direccion:</h3> <input id= "formDireccion" name="direccion">
+        </div>
+        <div id="section5">
+          <h3>Telefono:</h3> <input type="number" id="formTelefono" name="telefono">
+        </div> 
+        <div id="section6">
+          <button id="btn" onclick="insertVendedor();"  >Agregar Vendedor</button>   
+         </div> 
+       
+      </form>
+
     </section>
     <section id="stock">
       <div id="vendedores">

@@ -20,3 +20,48 @@ window.addEventListener('load', function(event) {
      xhr.send()
     
 }); 
+
+
+
+function insertVendedor(){
+
+    var form = {
+        dpi : document.getElementById("formDPI").value,
+        nombre: document.getElementById("formNombre").value,
+        apellido: document.getElementById("formApellido").value,
+        direccion : document.getElementById("formDireccion").value,
+        telefono: document.getElementById("formTelefono").value
+    };
+
+
+    var xhr = new XMLHttpRequest();
+
+
+    xhr.onload = function() {
+        if(xhr.readyState === xhr.DONE){
+            if(xhr.status === 200){
+                var resultJs = JSON.parse(this.responseText);
+                console.log(resultJs);
+                console.log("%c Result de su post esta listo: ",'color: orange;');
+                alert("Se registro su nuevo vendedor a la perfeccion");
+            }
+            else 
+                console.log("No se obtuvo repuesta", xhr.status);
+        }
+        else 
+            console.log("no esta hecho");
+
+    };
+
+
+    xhr.onerror = function(){
+        alert(`NetworkError`);
+    }
+
+    xhr.open('POST','http://localhost:3000/insertVendedor', true);
+    xhr.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
+    xhr.send(JSON.stringify(form));
+    alert("Se enviaron los datos");
+
+
+};

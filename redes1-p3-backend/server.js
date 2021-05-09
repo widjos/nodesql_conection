@@ -25,6 +25,8 @@ app.get("/", (req,res) => {
 
 
 require("./app/routes/consultas.routes")(app);
+require("./app/routes/vendedor.routes")(app);
+require("./app/routes/venta.routes")(app);
 
 app.listen(3000, () => {
     console.log("Server running on port  3000");
